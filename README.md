@@ -11,7 +11,7 @@ How can the company optimize its loan offerings and risk management strategies b
 
 ### **1. Customer Behavior Hypothesis**
 **Hypothesis**:  
-Customers with higher annual income and homeownership status (Own/Mortgage) are less likely to default on loans compared to those who rent.
+Customers with higher income and homeownership (Own/Mortgage) are less likely to have loans in "Default" status, and the distribution of all loan statuses (Fully Paid, Current, Default) varies across income and homeownership categories.
 
 **KPIs**:  
 - **Loan Status Distribution**: Analyze the distribution of all loan statuses (e.g., Fully Paid, Current, Default) across income ranges and homeownership categories.  
