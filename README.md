@@ -14,7 +14,7 @@ How can the company optimize its loan offerings and risk management strategies b
 Customers with higher annual income and homeownership status (Own/Mortgage) are less likely to default on loans compared to those who rent.
 
 **KPIs**:  
-- **Default Rate**: Percentage of loans not fully paid or in default status, segmented by annual income and homeownership status.  
+- **Loan Status Distribution**: Analyze the distribution of all loan statuses (e.g., Fully Paid, Current, Default) across income ranges and homeownership categories.  
 - **Annual Income Distribution by Loan Status**: Visualize income ranges across loan statuses (Fully Paid, Current, Default) to identify trends.
 
 ---
