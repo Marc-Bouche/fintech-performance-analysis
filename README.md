@@ -11,11 +11,21 @@ How can the company optimize its loan offerings and risk management strategies b
 
 ### **1. Customer Behavior Hypothesis**
 **Hypothesis**:  
-Customers with higher income and homeownership (Own/Mortgage) are less likely to have loans in "Default" status, and the distribution of all loan statuses (Fully Paid, Current, Default) varies across income and homeownership categories.
+Customers with higher income and homeownership (Own/Mortgage) are less likely to have loans in "Default" status. The distribution of all loan statuses (e.g., Fully Paid, Current, Default, Late, In Grace Period) varies across income ranges and homeownership categories.
 
 **KPIs**:  
-- **Loan Status Distribution**: Analyze the distribution of all loan statuses (e.g., Fully Paid, Current, Default) across income ranges and homeownership categories.  
-- **Annual Income Distribution by Loan Status**: Visualize income ranges across loan statuses (Fully Paid, Current, Default) to identify trends.
+
+Loan Status Distribution:
+- Analyze the distribution of all loan statuses (e.g., Fully Paid, Current, Default, Late, In Grace Period) across income ranges and homeownership categories.
+
+Annual Income Distribution by Loan Status:
+- Visualize income ranges for each loan status (e.g., Fully Paid, Current, Default, Late, In Grace Period) to identify trends.
+
+Loan Amount Insights:
+- Analyze the average loan amount across income ranges and homeownership categories to understand borrowing patterns.
+
+Loan Status Percentage Rates:
+- Calculate and visualize the percentage rates of each loan status (e.g., Default Rate, Fully Paid Rate) across income ranges and homeownership categories.
 
 ---
 
