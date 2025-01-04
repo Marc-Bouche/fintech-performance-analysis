@@ -59,20 +59,41 @@ FROM df_merged
 GROUP BY region, purpose
 ORDER BY region, fully_paid_rate DESC;
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
-
-# 6. Regional Economic Indicators
+#6. Repayment Rates by Income Group
 SELECT 
-    d.region,
-    e.unemployment_rate,
-    e.median_income,
+    region, 
+    CASE 
+        WHEN annual_inc < 50000 THEN '<50K'
+        WHEN annual_inc BETWEEN 50000 AND 100000 THEN '50K-100K'
+        WHEN annual_inc BETWEEN 100000 AND 150000 THEN '100K-150K'
+        ELSE '>150K'
+    END AS income_group,
     COUNT(*) AS loan_count,
-    COUNT(CASE WHEN d.loan_status = 'Fully Paid' THEN 1 END) * 100.0 / COUNT(*) AS fully_paid_rate
-FROM df_merged d
-JOIN regional_economics e ON d.region = e.region
-GROUP BY d.region, e.unemployment_rate, e.median_income
+    COUNT(CASE WHEN loan_status = 'Fully Paid' THEN 1 END) * 100.0 / COUNT(*) AS fully_paid_rate
+FROM df_merged
+GROUP BY region, income_group
 ORDER BY fully_paid_rate DESC;
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------#
+#7. Repayment Rates by Loan Purpose
 
+SELECT 
+    region,
+    purpose,
+    COUNT(*) AS loan_count,
+    COUNT(CASE WHEN loan_status = 'Fully Paid' THEN 1 END) * 100.0 / COUNT(*) AS fully_paid_rate
+FROM df_merged
+GROUP BY region, purpose
+ORDER BY fully_paid_rate DESC;
+#-----------------------------------------------------------------------------------------------------------------------------------------------#
+#8. Repayment Rates by Loan Term
 
-
-
+SELECT 
+    region,
+    term,
+    COUNT(*) AS loan_count,
+    COUNT(CASE WHEN loan_status = 'Fully Paid' THEN 1 END) * 100.0 / COUNT(*) AS fully_paid_rate
+FROM df_merged
+GROUP BY region, term
+ORDER BY fully_paid_rate DESC;
+#-----------------------------------------------------------------------------------------------------------------------------------------------#
