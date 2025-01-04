@@ -31,7 +31,7 @@ Loan Status Percentage Rates:
 
 ### **2. Regional Performance Hypothesis**
 **Hypothesis**:  
-Loans issued in the Northeast region have a higher repayment rate compared to other regions.
+Loans issued in the West region demonstrate higher repayment rates due to favorable customer demographics or loan purposes compared to other regions.
 
 **KPIs**:  
 - **Repayment Rate by Region**: Percentage of loans fully paid in each region, highlighting the performance of the Northeast compared to others.
