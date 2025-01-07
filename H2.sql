@@ -1,5 +1,5 @@
 USE fintech_analysis;
-#-----------------------------------------------------------------------------------------------------------------------------------------------#
+##-----------------------------------------------------------------------------------------------------------------------------------------------#
 
 # 1. Repayment Rate by Region
 SELECT 
@@ -59,6 +59,7 @@ FROM df_merged
 GROUP BY region, purpose
 ORDER BY region, fully_paid_rate DESC;
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
+
 #6. Repayment Rates by Income Group
 SELECT 
     region, 
@@ -73,10 +74,9 @@ SELECT
 FROM df_merged
 GROUP BY region, income_group
 ORDER BY fully_paid_rate DESC;
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
-#7. Repayment Rates by Loan Purpose
 
+#7. Repayment Rates by Loan Purpose
 SELECT 
     region,
     purpose,
@@ -86,8 +86,8 @@ FROM df_merged
 GROUP BY region, purpose
 ORDER BY fully_paid_rate DESC;
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
-#8. Repayment Rates by Loan Term
 
+#8. Repayment Rates by Loan Term
 SELECT 
     region,
     term,
