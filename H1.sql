@@ -5,6 +5,18 @@ SELECT *
 FROM df_merged;
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 
+# 0. Year-over-year loan count trend
+SELECT 
+    issue_year,
+    loan_count,
+    LAG(loan_count) OVER (ORDER BY issue_year) AS previous_year_count,
+    (loan_count - LAG(loan_count) OVER (ORDER BY issue_year)) * 100.0 / LAG(loan_count) OVER (ORDER BY issue_year) AS yoy_growth_percentage
+FROM 
+    df_loan_count_by_year_clean
+ORDER BY 
+    issue_year ASC;
+#-----------------------------------------------------------------------------------------------------------------------------------------------#
+
 # 1.  Loan Status Distribution & Aggregation
 -- Combined Loan Status View
 SELECT 
@@ -27,9 +39,6 @@ SELECT
 FROM df_merged
 GROUP BY home_ownership, income_range, loan_status, loan_status_group
 ORDER BY home_ownership, income_range, loan_status_group, loan_status;
-
-
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 
 # 2. Loan Amount Insights
@@ -48,7 +57,6 @@ ORDER BY home_ownership, income_range;
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 
 # 3. Loan Status Distribution Rates
-
 SELECT 
     home_ownership,
     CASE 
@@ -79,11 +87,9 @@ SELECT
 FROM df_merged
 GROUP BY purpose, verification_status, loan_status
 ORDER BY purpose, verification_status, loan_status;
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 
 # 5. Impact of Employment Length on Loan Performance
--- Step 1: Clean and categorize emp_length
 SELECT 
     CASE 
         WHEN emp_length = 'Unknown' THEN 'Unknown'
@@ -112,8 +118,6 @@ FROM df_merged
 WHERE loan_status IN ('Fully paid', 'Charged off')
 GROUP BY emp_length_category, loan_status
 ORDER BY emp_length_category, loan_status;
-
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 
 # 6. Loan Amount vs. Loan Outcome
@@ -140,5 +144,4 @@ FROM df_merged
 WHERE loan_status IN ('Fully paid', 'Charged off')
 GROUP BY loan_amount_range, loan_status
 ORDER BY loan_amount_range, loan_status;
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
