@@ -41,11 +41,6 @@ Loans issued for **debt consolidation** have the lowest default rates compared t
 
 ---
 
-### **Cross-Hypothesis KPI**  
-- **Loan Count Trend**: Year-over-year trend of loans issued provides context for temporal trends and supports overall analysis but is not directly tied to a single hypothesis.
-
----
-
 ## 📂 Repository Structure  
 
 ### **Folders and Files**  
