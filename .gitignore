@@ -1,0 +1,7 @@
+
+*.csv
+.ipynb_checkpoints/Notes-checkpoint.txt
+clean_csv_files/.DS_Store
+Dataframes_Relational_database.mwb
+draft.sql
+Notes.txt
