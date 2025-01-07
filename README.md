@@ -53,4 +53,8 @@ Loans issued for debt consolidation have the lowest default rates compared to ot
 
 
 
-## *Work in progress..*
+## Links:
+- [Conclusion & Insights]()
+- [Visualization on Tableau]()
+
+
