@@ -46,6 +46,30 @@ Loans issued for **debt consolidation** have the lowest default rates compared t
 
 ---
 
+## 📂 Repository Structure  
+
+### **Folders and Files**  
+
+## 📂 Repository Structure  
+
+| **Name**               | **Description**                                                                                  |
+|------------------------|--------------------------------------------------------------------------------------------------|
+| `.ipynb_checkpoints`   | Jupyter Notebook checkpoints folder for autosaved versions of notebooks.                         |
+| `.DS_Store`            | macOS system file; can be ignored or removed.                                                   |
+| `Data_cleaning.ipynb`  | Notebook for cleaning and preprocessing raw data into a merged dataset (`df_merged`).            |
+| `EDA.ipynb`            | Notebook for exploratory data analysis (EDA), including generic visualizations from `df_merged`. |
+| `H1.sql`               | SQL queries related to Hypothesis 1, focusing on customer behavior and loan status trends.       |
+| `H2.sql`               | SQL queries for Hypotheses 2, analyzing regional performance.                                    |
+| `H3.sql`               | SQL queries for Hypotheses 3, loan purpose trends.                                               |
+| `README.md`            | Project overview, business questions, hypotheses, KPIs, and links to resources.                 |
+
+
+### **Notes**  
+- The `.ipynb_checkpoints` and `.DS_Store` files are automatically generated and not essential for analysis.  
+- SQL files (`H1.sql`, `H2.sql`, `H3.sql`) contain queries supporting specific hypotheses.  
+- All notebooks (`Data_cleaning.ipynb`, `EDA.ipynb`) use the merged dataset `df_merged` as the primary source.  
+
+
 ## 🔗 Links:  
 - [📄 Conclusion & Insights](https://docs.google.com/document/d/1fJ9e7GndC3Xuc2muRaUYPHZyufXOJ8wf11g1f3UARL4/edit?tab=t.0)  
 - [📊 Visualization on Tableau (WIP)](https://public.tableau.com/app/profile/marc.bouche/viz/WIPFinancialPerformanceAnalysis/Dashboard1)  
